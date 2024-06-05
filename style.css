@@ -1,0 +1,11 @@
+body {
+    margin: 0; 
+}
+
+.Red {
+    background-color: red;
+    padding: 10px;
+    color: #FFFF;
+    text-decoration: none;
+    border-radius: 20px;
+}
