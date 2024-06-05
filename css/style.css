@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.Red {
+    text-align: center;
+    background-color: red;
+    padding: 5px;
+    color: #FFFF;
+    text-decoration: none;
+    border-radius: 50px;
+}
