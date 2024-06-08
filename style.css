@@ -39,11 +39,10 @@ body {
   }
 }
 
-.Red {
+.mainmenu {
     text-align: center;
-    background-color: red;
-    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
     color: #FFFF;
     text-decoration: none;
-    border-radius: 50px;
 }
