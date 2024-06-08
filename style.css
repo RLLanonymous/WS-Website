@@ -7,7 +7,7 @@ body {
 /* Style the navigation bar */
 .navbar {
   width: 100%;
-  background-color: #555;
+  background-color: #585555;
   overflow: auto;
 }
 
@@ -16,7 +16,7 @@ body {
   float: left;
   text-align: center;
   padding: 12px;
-  color: white;
+  color: rgb(255, 250, 250);
   text-decoration: none;
   font-size: 17px;
 }
@@ -28,17 +28,8 @@ body {
 
 /* Current/active navbar link */
 .active {
-  background-color: #04AA6D;
+  background-color: #990000;
 }
-/* Style the search box inside the navigation bar */
-.navbar input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-  }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
 @media screen and (max-width: 500px) {
