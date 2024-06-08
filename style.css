@@ -2,7 +2,7 @@
 body {
     margin: 0;
     background-color: #181b22;
-    border: solid;
+
 }
 
 /* Style the navigation bar */
@@ -20,6 +20,7 @@ body {
   color: rgb(255, 250, 250);
   text-decoration: none;
   font-size: 17px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Navbar links on mouse-over */
