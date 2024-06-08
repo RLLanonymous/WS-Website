@@ -2,6 +2,7 @@
 body {
     margin: 0;
     background-color: #181b22;
+    border: solid;
 }
 
 /* Style the navigation bar */
@@ -39,10 +40,16 @@ body {
   }
 }
 
-.mainmenu {
+.maintextanim {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 20px;
+    padding: 10px;
     color: #FFFF;
     text-decoration: none;
+}
+
+.mainlogoanim {
+    text-align: center;
+    padding: 20px;
+    height : auto;
 }
