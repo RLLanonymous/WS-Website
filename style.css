@@ -103,5 +103,12 @@ body {
   transform: translateY(0);
 }
 .NoTextDecoration {
-text-decoration: none;
+  text-decoration: none;
+}
+
+.tosP {
+  text-align: center;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
 }
