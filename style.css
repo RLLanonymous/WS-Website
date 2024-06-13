@@ -146,3 +146,26 @@ font-size: medium;
       transform: scale(1.1);
   }
 }
+
+        /* Inline CSS for FAQ Section */
+        .faq-section {
+          padding: 20px;
+      }
+      .faq-item {
+          margin-bottom: 20px;
+          padding: 15px;
+          background-color: #2a2d35;
+          border-radius: 5px;
+      }
+      .faq-question {
+          font-size: 1.5em;
+          font-weight: bold;
+          color: white;
+          margin-bottom: 10px;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .faq-answer {
+          font-size: 1em;
+          color: #cccccc;
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
