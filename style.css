@@ -83,7 +83,7 @@ body {
 
 /* Footer styling */
 .footer {
-  background-color: #333;
+  background-color: rgba(red, green, blue, alpha);
   color: #fff;
   text-align: center;
   padding: 10px;

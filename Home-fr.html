@@ -11,26 +11,92 @@
         <!--Material icons google .css tool-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
-        
         <!--Animate .css tool-->       
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <!--AOS .css tool-->
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+        <!--Boxicon-->
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <!--Fav icon-->
         <link rel="icon" href="img/Omega WS.png">
     </head>
 
    <body>
- <!-- Navbar -->
- <nav class="navbar">
-    <a class="active" href="Home-fr.html"><i class="fa fa-fw fa-home"></i></a>
-    <a href="tos-fr.html"><i class="fa fa-book"></i> Conditions d'utilisation</a>
-    <a href="FAQ-fr.html"><i class="fa fa-question-circle"></i> F.A.Q</a>
-    <a href="https://discord.gg/hDGRGctruf"><i class="fa fa-commenting"></i> Discord</a>
-    <a href="https://github.com/Omega-Facility-Devloppment"><i class="fa fa-github"></i> Github</a>
-    <a href="Home.html"><i class="fa fa-globe"></i> English</a>
-</nav>
+        <!--Navbar-->
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen' ></i>
+                <span class="logo navLogo"><a href="Home-fr.html">Ω | Oméga Development</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="#"></a>Oméga Development</span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="Home-fr.html"><i class="fa fa-fw fa-home"></i> Accueil</a></li>
+                        <li><a href="tos-fr.html"><i class="bx bxs-book"></i> T.O.S</a></li>
+                        <li><a href="https://discord.gg/hDGRGctruf"><i class="bx bxl-discord-alt"></i> Discord</a></li>
+                        <li><a href="https://github.com/Omega-Facility-Devloppment"><i class="fa fa-github"></i> Github</a></li>
+                        <li><a href="FAQ-fr.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                       <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                       </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Search...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <script>
+    const body = document.querySelector("body"),
+          nav = document.querySelector("nav"),
+          modeToggle = document.querySelector(".dark-light"),
+          searchToggle = document.querySelector(".searchToggle"),
+          sidebarOpen = document.querySelector(".sidebarOpen"),
+          siderbarClose = document.querySelector(".siderbarClose");
+          let getMode = localStorage.getItem("mode");
+              if(getMode && getMode === "dark-mode"){
+                body.classList.add("dark");
+              }
+    // js code to toggle dark and light mode
+          modeToggle.addEventListener("click" , () =>{
+            modeToggle.classList.toggle("active");
+            body.classList.toggle("dark");
+            // js code to keep user selected mode even page refresh or file reopen
+            if(!body.classList.contains("dark")){
+                localStorage.setItem("mode" , "light-mode");
+            }else{
+                localStorage.setItem("mode" , "dark-mode");
+            }
+          });
+    // js code to toggle search box
+            searchToggle.addEventListener("click" , () =>{
+            searchToggle.classList.toggle("active");
+          });
+     
+          
+    //   js code to toggle sidebar
+    sidebarOpen.addEventListener("click" , () =>{
+        nav.classList.add("active");
+    });
+    body.addEventListener("click" , e =>{
+        let clickedElm = e.target;
+        if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+            nav.classList.remove("active");
+        }
+    });
+    </script>
         <!--Main Text & Logo-->
         <div class="mainlogoanim">
             <img class="animate__animated animate__bounceIn animate__slow" src="img\Logo_Omega_Facility_RP.png" alt="The logo of oméga facility devloppment.">
