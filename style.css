@@ -145,22 +145,23 @@ body {
 }
 /* ===== Colours ===== */
 :root{
-    --body-color: #18191A;
-    --nav-color: #242526;
-    --side-nav: #242526;
-    --text-color: #CCC;
-    --search-bar: #242526;
+  --body-color: #575758f8;
+  --nav-color: #414344;
+  --side-nav: #010718;
+  --text-color: #FFF;
+  --search-bar: #F2F2F2;
+  --search-text: #010718;
 }
 body{
     height: 100vh;
     background-color: var(--body-color);
 }
 body.dark{
-    --body-color: #18191A;
-    --nav-color: #242526;
-    --side-nav: #242526;
-    --text-color: #CCC;
-    --search-bar: #242526;
+  --body-color: #18191A;
+  --nav-color: #242526;
+  --side-nav: #242526;
+  --text-color: #CCC;
+  --search-bar: #242526;
 }
 nav{
     position: fixed;
@@ -172,7 +173,7 @@ nav{
     z-index: 100;
 }
 body.dark nav{
-    border: 1px solid #393838;
+    border: 1px solid #18191A;
 }
 nav .nav-bar{
     position: relative;
@@ -436,7 +437,7 @@ body.dark .search-field i{
 .dropdown-menu a {
     display: block;
     padding: 10px 20px;
-    color: #333;
+    color: #010718;
     text-decoration: none;
 }
 .dropdown-menu a:hover {
@@ -505,7 +506,7 @@ body.dark .search-field i{
   .dropdown-menu {
     position: absolute; /* Position the menu relative to the button */
     display: none; /* Hide the menu by default */
-    background-color: ##9e9999; /* Light background color */
+    background-color: rgb(red, green, blue); /* Black background color */
     padding: 0.5rem;
     border-radius: 5px; /* Add rounded corners */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
