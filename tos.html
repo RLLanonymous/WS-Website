@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title>Oméga Devloppment</title>
@@ -45,64 +45,87 @@
                         <i class='bx bx-sun sun'></i>
                     </div>
                     <div class="searchBox">
-                       <div class="searchToggle">
-                        <i class='bx bx-x cancel'></i>
-                        <i class='bx bx-search search'></i>
-                       </div>
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
                         <div class="search-field">
                             <input type="text" placeholder="Search...">
                             <i class='bx bx-search'></i>
                         </div>
                     </div>
+                    <div class="languageDropdown">
+                        <i class='bx bx-globe' id="languageButton"></i>
+                        <div class="dropdown-menu">
+                            <a href="Home-fr.html">🇫🇷</a>
+                            <a href="Home.html">🇬🇧</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
-    <script>
-    const body = document.querySelector("body"),
-          nav = document.querySelector("nav"),
-          modeToggle = document.querySelector(".dark-light"),
-          searchToggle = document.querySelector(".searchToggle"),
-          sidebarOpen = document.querySelector(".sidebarOpen"),
-          siderbarClose = document.querySelector(".siderbarClose");
-          let getMode = localStorage.getItem("mode");
-              if(getMode && getMode === "dark-mode"){
-                body.classList.add("dark");
-              }
-    // js code to toggle dark and light mode
-          modeToggle.addEventListener("click" , () =>{
-            modeToggle.classList.toggle("active");
-            body.classList.toggle("dark");
-            // js code to keep user selected mode even page refresh or file reopen
-            if(!body.classList.contains("dark")){
-                localStorage.setItem("mode" , "light-mode");
-            }else{
-                localStorage.setItem("mode" , "dark-mode");
-            }
-          });
-    // js code to toggle search box
-            searchToggle.addEventListener("click" , () =>{
-            searchToggle.classList.toggle("active");
-          });
-     
-          
-    //   js code to toggle sidebar
-    sidebarOpen.addEventListener("click" , () =>{
-        nav.classList.add("active");
-    });
-    body.addEventListener("click" , e =>{
-        let clickedElm = e.target;
-        if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
-            nav.classList.remove("active");
-        }
-    });
-    </script>
+            <script>
+            const body = document.querySelector("body"),
+                  nav = document.querySelector("nav"),
+                  modeToggle = document.querySelector(".dark-light"),
+                  searchToggle = document.querySelector(".searchToggle"),
+                  sidebarOpen = document.querySelector(".sidebarOpen"),
+                  siderbarClose = document.querySelector(".siderbarClose");
+                  let getMode = localStorage.getItem("mode");
+                      if(getMode && getMode === "dark-mode"){
+                        body.classList.add("dark");
+                      }
+                      document.getElementById('languageButton').addEventListener('click', function() {
+                document.querySelector('.dropdown-menu').classList.toggle('show');
+            });
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.languageDropdown')) {
+                    document.querySelector('.dropdown-menu').classList.remove('show');
+                }
+            });
+            // js code to toggle dark and light mode
+                  modeToggle.addEventListener("click" , () =>{
+                    modeToggle.classList.toggle("active");
+                    body.classList.toggle("dark");
+                    // js code to keep user selected mode even page refresh or file reopen
+                    if(!body.classList.contains("dark")){
+                        localStorage.setItem("mode" , "light-mode");
+                    }else{
+                        localStorage.setItem("mode" , "dark-mode");
+                    }
+                  });
+            // js code to toggle search box
+                    searchToggle.addEventListener("click" , () =>{
+                    searchToggle.classList.toggle("active");
+                  });
+             
+                  
+            //   js code to toggle sidebar
+            sidebarOpen.addEventListener("click" , () =>{
+                nav.classList.add("active");
+            });
+            body.addEventListener("click" , e =>{
+                let clickedElm = e.target;
+                if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                    nav.classList.remove("active");
+                }
+            });
+            </script>
+        <!--Logo Anim-->
+        <div class="mainlogoanim">
+            <img class="animate__animated animate__bounceIn animate__slow" src="img\Logo_Omega_Facility_RP.png" alt="The logo of oméga facility devloppment.">
+        </div>
+        <!--Terms Of Service text-->
+                <div class="maintextanim">
+            <h3 class="animate__animated animate__bounceIn animate__slow">Terms Of Service</h1> 
+        </div>
         
         <div>
-            <p class="tosP">tos here.*</p>
+            <p class="tosP">Faut mettre les tos ici*</p>
         </div>
     </body>
     <body>
         <div class="footer">
-            Fait avec le  <span class="heart">❤️</span> par <a href="https://lumix.is-a.dev/" class="link">Lumix</a> <a href="https://github.com/Kiffun" class="link">Kiffun</a> et <a href="https://github.com/RLLanonymous" class="link">Lanonymous</a>
+            Made With  <span class="heart">❤️</span> by <a href="https://lumix.is-a.dev/" class="link">Lumix</a>  and <a href="https://github.com/RLLanonymous" class="link">Lanonymous</a>
         </body>
 </html>

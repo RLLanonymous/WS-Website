@@ -31,11 +31,11 @@
                         <i class='bx bx-x siderbarClose'></i>
                     </div>
                     <ul class="nav-links">
-                        <li><a href="Home.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                        <li><a href="Home.html"><i class="bx bxs-home"></i> Home</a></li>
                         <li><a href="tos.html"><i class="bx bxs-book"></i> T.O.S</a></li>
                         <li><a href="https://discord.gg/hDGRGctruf"><i class="bx bxl-discord-alt"></i> Discord</a></li>
                         <li><a href="https://github.com/Omega-Facility-Devloppment"><i class="fa fa-github"></i> Github</a></li>
-                        <li><a href="FAQ.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="FAQ.html"><i class="bx bxs-help-circle"></i> FAQ</a></li>
                     </ul>
                 </div>
                 <div class="darkLight-searchBox">
@@ -44,57 +44,72 @@
                         <i class='bx bx-sun sun'></i>
                     </div>
                     <div class="searchBox">
-                       <div class="searchToggle">
-                        <i class='bx bx-x cancel'></i>
-                        <i class='bx bx-search search'></i>
-                       </div>
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
                         <div class="search-field">
                             <input type="text" placeholder="Search...">
                             <i class='bx bx-search'></i>
                         </div>
                     </div>
+                    <div class="languageDropdown">
+                        <i class='bx bx-globe' id="languageButton"></i>
+                        <div class="dropdown-menu">
+                            <a href="Home-fr.html">🇫🇷</a>
+                            <a href="Home.html">🇬🇧</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
-    <script>
-    const body = document.querySelector("body"),
-          nav = document.querySelector("nav"),
-          modeToggle = document.querySelector(".dark-light"),
-          searchToggle = document.querySelector(".searchToggle"),
-          sidebarOpen = document.querySelector(".sidebarOpen"),
-          siderbarClose = document.querySelector(".siderbarClose");
-          let getMode = localStorage.getItem("mode");
-              if(getMode && getMode === "dark-mode"){
-                body.classList.add("dark");
-              }
-    // js code to toggle dark and light mode
-          modeToggle.addEventListener("click" , () =>{
-            modeToggle.classList.toggle("active");
-            body.classList.toggle("dark");
-            // js code to keep user selected mode even page refresh or file reopen
-            if(!body.classList.contains("dark")){
-                localStorage.setItem("mode" , "light-mode");
-            }else{
-                localStorage.setItem("mode" , "dark-mode");
-            }
-          });
-    // js code to toggle search box
-            searchToggle.addEventListener("click" , () =>{
-            searchToggle.classList.toggle("active");
-          });
-     
-          
-    //   js code to toggle sidebar
-    sidebarOpen.addEventListener("click" , () =>{
-        nav.classList.add("active");
-    });
-    body.addEventListener("click" , e =>{
-        let clickedElm = e.target;
-        if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
-            nav.classList.remove("active");
-        }
-    });
-    </script>
+            <script>
+            const body = document.querySelector("body"),
+                  nav = document.querySelector("nav"),
+                  modeToggle = document.querySelector(".dark-light"),
+                  searchToggle = document.querySelector(".searchToggle"),
+                  sidebarOpen = document.querySelector(".sidebarOpen"),
+                  siderbarClose = document.querySelector(".siderbarClose");
+                  let getMode = localStorage.getItem("mode");
+                      if(getMode && getMode === "dark-mode"){
+                        body.classList.add("dark");
+                      }
+                      document.getElementById('languageButton').addEventListener('click', function() {
+                document.querySelector('.dropdown-menu').classList.toggle('show');
+            });
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.languageDropdown')) {
+                    document.querySelector('.dropdown-menu').classList.remove('show');
+                }
+            });
+            // js code to toggle dark and light mode
+                  modeToggle.addEventListener("click" , () =>{
+                    modeToggle.classList.toggle("active");
+                    body.classList.toggle("dark");
+                    // js code to keep user selected mode even page refresh or file reopen
+                    if(!body.classList.contains("dark")){
+                        localStorage.setItem("mode" , "light-mode");
+                    }else{
+                        localStorage.setItem("mode" , "dark-mode");
+                    }
+                  });
+            // js code to toggle search box
+                    searchToggle.addEventListener("click" , () =>{
+                    searchToggle.classList.toggle("active");
+                  });
+             
+                  
+            //   js code to toggle sidebar
+            sidebarOpen.addEventListener("click" , () =>{
+                nav.classList.add("active");
+            });
+            body.addEventListener("click" , e =>{
+                let clickedElm = e.target;
+                if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                    nav.classList.remove("active");
+                }
+            });
+            </script>
 
     <!--FAQ Section-->
     <div class="faq-section">
