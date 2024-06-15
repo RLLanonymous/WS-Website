@@ -19,11 +19,10 @@
 ###
 
 <p align="left">| CDN | <br>- https://animate.style/ (Un outils pour animé a partir de class.)<br>[https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css]<br>-  (Font Awesome Icons)<br>[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css]</p>
+(Boxicons)<br>[https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css]</p>
 
 ###
 
-<div align="center">
-  <img height="200" src="https://media4.giphy.com/media/Q7SKqn3G97xpmfSOvG/giphy.gif?cid=6c09b952n8745n2ngkmjfjgu4relwsqeqkbw4ezn6riyuo4l&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"  />
-</div>
+
 
 ###
